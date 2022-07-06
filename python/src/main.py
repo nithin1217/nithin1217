@@ -53,7 +53,7 @@ def speakQuestion():
     section = extractSection(src)[0]
     options = extractOptions(section)
     ques =  extractQuestion(section)
-
+    speak('Question number')
     speak(ques)
     speak('Options are')
 
