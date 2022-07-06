@@ -14,7 +14,7 @@ def extractOptions(con):
 
 def extractSection(con):
     reg_str = '<section>(\s.*\s.*\s.*)</section>'
-    return re.findall(reg_str, con)[0]
+    return re.findall(reg_str, con)
 
 
 s = """<html lang="en"><head>
@@ -85,5 +85,6 @@ s = """<html lang="en"><head>
 </body></html>"""
 
 section = extractSection(s)[0]
-section = str(section).strip()
-print(extractOptions(section))
+ques =  extractQuestion(section)
+options = extractOptions(section)
+print(options)
