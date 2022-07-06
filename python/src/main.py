@@ -22,6 +22,7 @@ def speak(query):
 
 def recognize_speech():
     with microphone as source:
+        recognizer.energy_threshold=1000
         audio = recognizer.listen(source, phrase_time_limit=5)
     response = ""
     speak("Identifying speech..")
@@ -68,27 +69,74 @@ def onStart():
     element.click()
 
 
-# ser = Service("C:\\Users\\navinithin\\Downloads\\chromedriver.exe")
-# op = webdriver.ChromeOptions()
-# driver = webdriver.Chrome(service=ser, options=op)
+
 
 driver = webdriver.Chrome("D:\Quiz Application with Timer\python\driver\chromedriver.exe")
 url= "https://nithin1217.github.io"
 driver.get(url)
 driver.maximize_window()
-# url="file:///D:/Quiz%20Application%20with%20Timer/index.html"
+
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[1].id)
 language ='en'
 recognizer = sr.Recognizer()
 microphone = sr.Microphone()
-recognizer.energy_threshold=10000
-time.sleep(1)
-speak("Hi! I am now online..")
-onStart()
 
-speakQuestion()
+time.sleep(1)
+speak("You  are  Entered  Exam  Portal!")
+while True:
+    time.sleep(2)
+    speak("Give your valued Command..") 
+    voice = recognize_speech().lower()
+    if 'start' in voice:
+        onStart()
+        while 1:
+            speakQuestion()
+            break
+
+        if 'option a' in voice:
+            element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[1]')
+            element.click()
+            speak('wrong Answer')
+            element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+            element.click()
+            continue
+    
+        elif 'option b' in voice:
+            element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[2]')
+            element.click()
+            speak('Correct Answer') 
+            element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+            element.click()
+
+        elif 'option c' in voice:
+            element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[3]')
+            element.click()
+            speak('wrong Answer')
+            element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+            element.click()
+
+        elif 'option d' in voice:
+            element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[4]')
+            element.click()
+            speak('wrong Answer')
+            element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+            element.click()
+
+    elif 'close tab' in voice:
+        speak('Closing Tab..')
+        element.close()
+    elif 'go back' in voice:
+        element.back()
+    elif 'go forward' in voice:
+        element.forward()
+    elif 'exit' in voice:
+        speak('Goodbye Master!')
+        element.quit()
+        break
+    
+
 # while 1:
     # speak("How can I help you?")
     # voice = recognize_speech().lower()
@@ -97,4 +145,6 @@ speakQuestion()
     #     while True:
     #         cmove()
 
- 
+ # url="file:///D:/Quiz%20Application%20with%20Timer/index.html"# ser = Service("C:\\Users\\navinithin\\Downloads\\chromedriver.exe")
+# op = webdriver.ChromeOptions()
+# driver = webdriver.Chrome(service=ser, options=op)

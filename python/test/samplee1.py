@@ -43,17 +43,17 @@
 #         while True:
 #             cmove()
        
-#     elif 'close tab' in voice:
-#         speak('Closing Tab..')
-#         s.close()
-#     elif 'go back' in voice:
-#         s.back()
-#     elif 'go forward' in voice:
-#         s.forward()
-#     elif 'exit' in voice:
-#         speak('Goodbye Master!')
-#         s.quit()
-#         break
-#     else:
-#         speak('Not a valid command. Please try again.')
-#     time.sleep(2)
+    elif 'close tab' in voice:
+        speak('Closing Tab..')
+        s.close()
+    elif 'go back' in voice:
+        s.back()
+    elif 'go forward' in voice:
+        s.forward()
+    elif 'exit' in voice:
+        speak('Goodbye Master!')
+        s.quit()
+        break
+    else:
+        speak('Not a valid command. Please try again.')
+    time.sleep(1)
