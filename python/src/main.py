@@ -94,35 +94,145 @@ while True:
         while 1:
             speakQuestion()
             break
+    elif 'Hyper Text Preprocessor' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[1]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+            
+    elif 'Hyper Text Markup Language' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[2]')
+        element.click()
+        speak('Correct Answer') 
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
 
-        if 'option a' in voice:
-            element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[1]')
-            element.click()
-            speak('wrong Answer')
-            element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
-            element.click()
-            continue
+    elif 'Hyper Text Multiple Language' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[3]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+
+    elif 'Hyper Tool Multi Language' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[4]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+
+    elif 'Common Style Sheet' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[1]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+            
+    elif 'Colorful Style Sheet' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[2]')
+        element.click()
+        speak('Correct Answer') 
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+
+    elif 'Computer Style Sheet' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[3]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+
+    elif 'Cascading Style Sheet' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[4]')
+        element.click()
+        speak('correct Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+
+    elif '3' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[1]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+            
+    elif '3' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[2]')
+        element.click()
+        speak('Correct Answer') 
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+
+    elif '3' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[3]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+
+    elif '3' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[4]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
     
-        elif 'option b' in voice:
-            element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[2]')
-            element.click()
-            speak('Correct Answer') 
-            element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
-            element.click()
+    elif '4' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[1]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+            
+    elif '4' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[2]')
+        element.click()
+        speak('Correct Answer') 
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
 
-        elif 'option c' in voice:
-            element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[3]')
-            element.click()
-            speak('wrong Answer')
-            element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
-            element.click()
+    elif '4' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[3]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
 
-        elif 'option d' in voice:
-            element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[4]')
-            element.click()
-            speak('wrong Answer')
-            element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
-            element.click()
+    elif '4' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[4]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+
+    elif '5' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[1]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+            
+    elif '5' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[2]')
+        element.click()
+        speak('Correct Answer') 
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+
+    elif '5' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[3]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
+
+    elif '5' in voice:
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/section/div[2]/div[4]')
+        element.click()
+        speak('wrong Answer')
+        element=driver.find_element(By.XPATH,'/html/body/div[3]/footer/button')
+        element.click()
 
     elif 'close tab' in voice:
         speak('Closing Tab..')
